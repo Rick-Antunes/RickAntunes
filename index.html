@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <header class="navbar">
+    <!-- Toggle Dark/Light -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+      <span class="toggle-track">
+        <span class="toggle-thumb"></span>
+        <span class="toggle-icon sun">☀</span>
+        <span class="toggle-icon moon">◐</span>
+      </span>
+    </button>
+
+    <!-- Contatos -->
+    <nav class="contacts">
+      <a href="mailto:SEU_EMAIL_AQUI" class="contact-item" title="Email">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">rk.antunes.work@gmail.com</span>
+      </a>
+      <span class="contact-sep">·</span>
+      <a href="tel:SEU_TELEFONE_AQUI" class="contact-item" title="Telefone">
+        <span class="contact-label">Telefone</span>
+        <span class="contact-value">47992714862</span>
+      </a>
+      <span class="contact-sep">·</span>
+      <a href="https://linkedin.com/in/SEU_LINKEDIN_AQUI" target="_blank" class="contact-item" title="LinkedIn">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">https://www.linkedin.com/in/rickkauaantunes/</span>
+      </a>
+    </nav>
+
+    <!-- Clima -->
+    <div class="weather-widget" id="weatherWidget">
+      <span class="weather-icon" id="weatherIcon">⟳</span>
+      <span class="weather-temp" id="weatherTemp">—°</span>
+      <span class="weather-desc" id="weatherDesc">carregando…</span>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section class="hero">
+    <!-- Contador de visitantes -->
+    <div class="visitor-counter">
+      <span class="visitor-number" id="visitorCount">0</span>
+      <span class="visitor-label">visitantes</span>
+    </div>
+
+    <!-- Foto + Bio -->
+    <div class="hero-content">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo" id="heroPhoto">
+          <!-- Substitua o src pela sua foto -->
+          <img src="Documentos/Foto.jpeg" alt="Foto de perfil" onerror="this.parentElement.classList.add('no-img')" />
+          <div class="photo-placeholder">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-bio">
+        <p class="bio-eyebrow">Olá, eu sou</p>
+        <h1 class="bio-name">Rick</h1>
+        <p class="bio-role">Técnico em Desenvolvimento de Sistemas - (Futuro engenheiro de software)</p>
+        <p class="bio-text">
+          Olá, meu nome é Rick tenho 19 anos atualmente estou buscando por uma oportunidade no mundo do desenvolvimento.
+          Amo esta área e ainda mais desenvolver apps com FastAPI, HTML ou JS.
+          hoje estou cursando engenharia de software pela <a style="font-style: italic" href="https://www.uninter.com/">Uninter</a>.
+          E por fim pretendo me tornar um grande desenvolvedor fullstack(ou pra onde a vida me levar😁)!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PROJETOS ═══════════════════════════ -->
+  <section class="carousel-section" id="projectsSection">
+    <div class="section-header">
+      <h2 class="section-title">Projetos</h2>
+      <div class="carousel-controls">
+        <button class="carousel-btn prev" id="projectPrev" aria-label="Anterior">‹</button>
+        <button class="carousel-btn next" id="projectNext" aria-label="Próximo">›</button>
+      </div>
+    </div>
+
+    <div class="carousel-viewport" id="projectCarousel">
+      <div class="carousel-track" id="projectTrack">
+
+        <!-- ── PROJETO 1 — ── -->
+        <div class="card project-card" data-link="https://cafecelestia-3zb8.onrender.com/">
+          <div class="card-img-wrap">
+            <img src="Documentos/cafecelestia.PNG" alt="Projeto 1" onerror="this.src=''" />
+            <div class="card-img-placeholder">Imagem do projeto</div>
+            <div class="card-overlay"><span>Ver projeto ↗</span></div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title" data-full-desc="E-commerce feito com Python, HTML, CSS, Flask e SQLalchemy.
+              Possuí cadastro e edição de produtos e usuários e +.">E-Commerce Café Celestia</h3>
+
+            <p class="card-desc">E-commerce feito com Python, HTML, CSS, Flask e SQLalchemy.
+              Possuí cadastro e edição de produtos e usuários e +.
+            </p>
+          </div>
+        </div>
+
+        <!-- ── PROJETO 2 ── -->
+        <div class="card project-card" data-link="https://comoestaoclima.netlify.app/">
+          <div class="card-img-wrap">
+            <img src="Documentos/ClimaAPP.PNG" alt="Projeto 2" onerror="this.src=''" />
+            <div class="card-img-placeholder">Imagem do projeto</div>
+            <div class="card-overlay"><span>Ver projeto ↗</span></div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title" data-full-desc="Aplicativo simples para saber o clima de uma cidade de sua escolha.
+              Feito HTML, CSS e JS, com extra de se permitir sua localização ele pega os dados automáticamente">Clima APP</h3>
+
+            <p class="card-desc">Aplicativo simples para saber o clima de uma cidade de sua escolha.
+              Feito HTML, CSS e JS, com extra de se permitir sua localização ele pega os dados automáticamente
+            </p>
+          </div>
+        </div>
+
+        <!-- ── PROJETO 3 ── 
+        <div class="card project-card" data-link="URL_DO_PROJETO_3">
+          <div class="card-img-wrap">
+            <img src="IMAGEM_PROJETO_3.jpg" alt="Projeto 3" onerror="this.src=''" />
+            <div class="card-img-placeholder">Imagem do projeto</div>
+            <div class="card-overlay"><span>Ver projeto ↗</span></div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title" data-full-desc="">TÍTULO DO PROJETO 3</h3>
+            <p class="card-desc">DESCRIÇÃO_RESUMIDA_PROJETO_3</p>
+          </div>
+        </div>
+
+         <!--PROJETO 4
+        <div class="card project-card" data-link="URL_DO_PROJETO_4">
+          <div class="card-img-wrap">
+            <img src="IMAGEM_PROJETO_4.jpg" alt="Projeto 4" onerror="this.src=''" />
+            <div class="card-img-placeholder">Imagem do projeto</div>
+            <div class="card-overlay"><span>Ver projeto ↗</span></div>
+          </div>
+          <div class="card-info">
+            <h3 class="card-title" data-full-desc="DESCRIÇÃO_COMPLETA_PROJETO_4">TÍTULO DO PROJETO 4</h3>
+            <p class="card-desc">DESCRIÇÃO_RESUMIDA_PROJETO_4</p>
+          </div>
+        </div>-->
+
+      </div><!-- /track -->
+    </div><!-- /viewport -->
+
+    <!-- Descrição dinâmica do projeto em foco -->
+    <div class="project-focus-desc" id="projectFocusDesc">
+      <p id="projectFocusText">Passe o mouse sobre um projeto para ver a descrição completa.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ HABILIDADES ═══════════════════════════ -->
+  <section class="carousel-section" id="skillsSection">
+    <div class="section-header">
+      <h2 class="section-title">Habilidades</h2>
+      <div class="carousel-controls">
+        <button class="carousel-btn prev" id="skillPrev" aria-label="Anterior">‹</button>
+        <button class="carousel-btn next" id="skillNext" aria-label="Próximo">›</button>
+      </div>
+    </div>
+
+    <div class="carousel-viewport" id="skillCarousel">
+      <div class="carousel-track" id="skillTrack">
+
+        <!-- ── HABILIDADE 1 ── -->
+        <div class="card skill-card">
+          <div class="skill-logo-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+          </div>
+          <h3 class="skill-name">Python</h3>
+        </div>
+
+        <!-- ── HABILIDADE 2 ── -->
+        <div class="card skill-card">
+          <div class="skill-logo-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+          </div>
+          <h3 class="skill-name">JavaScript</h3>
+        </div>
+
+        <!-- ── HABILIDADE 3 ── -->
+        <div class="card skill-card">
+          <div class="skill-logo-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+          </div>
+          <h3 class="skill-name">HTML5</h3>
+        </div>
+
+        <!-- ── HABILIDADE 4 ── -->
+        <div class="card skill-card">
+          <div class="skill-logo-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+          </div>
+          <h3 class="skill-name">CSS3</h3>
+        </div>
+
+        <!-- ── HABILIDADE 5 ── -->
+        <div class="card skill-card">
+          <div class="skill-logo-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" />
+          </div>
+          <h3 class="skill-name">Flask</h3>
+        </div>
+
+        <!-- ── HABILIDADE 6 ── -->
+        <div class="card skill-card">
+          <div class="skill-logo-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" />
+          </div>
+          <h3 class="skill-name">SQLite</h3>
+        </div>
+
+        <!-- ── HABILIDADE 7 ── -->
+        <div class="card skill-card">
+          <div class="skill-logo-wrap">
+            <img src="https://icon.icepanel.io/Technology/svg/PostgresSQL.svg" alt="PostgreSQL" />
+          </div>
+          <h3 class="skill-name">PostgreSQL</h3>
+        </div>
+    
+        <!-- ── HABILIDADE 8 ── -->
+        <div class="card skill-card">
+          <div class="skill-logo-wrap">
+            <img src="https://icon.icepanel.io/Technology/svg/FastAPI.svg" alt="FastAPI" />
+          </div>
+          <h3 class="skill-name">FastAPI</h3>
+        </div>
+
+        <!-- ── HABILIDADE 9 ── -->
+        <div class="card skill-card">
+          <div class="skill-logo-wrap">
+            <img src="  https://st2.depositphotos.com/4038693/8095/v/450/depositphotos_80954362-stock-illustration-concept-of-travel-or-studying.jpg" alt="Inglês" />
+          </div>
+          <h3 class="skill-name">Inglês avançado</h3>
+        </div>
+
+      </div><!-- /track -->
+    </div><!-- /viewport -->
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Rick Kauã Antunes — Todos os direitos reservados <span style="color:var(--accent)"></span> · <span id="footerYear"></span></p>
+  </footer>
+
+  <!-- Axios CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
