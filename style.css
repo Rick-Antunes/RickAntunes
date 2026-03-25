@@ -530,8 +530,49 @@ a { color: inherit; text-decoration: none; }
   .hero-content { flex-direction: column; align-items: center; text-align: center; }
   .hero-photo { width: 220px; height: 265px; }
   .bio-text { margin: 0 auto; }
-  .card { flex: 0 0 calc(80% - 0.84rem); }
-  .skill-card { flex: 0 0 calc(40% - 0.63rem); }
+
+  /* Carrossel mobile — scroll nativo */
+  .carousel-viewport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .carousel-viewport::-webkit-scrollbar { display: none; }
+
+  .carousel-track {
+    transform: none !important; /* desativa o transform do JS */
+    width: max-content;
+  }
+
+  .card {
+    flex: 0 0 78vw;
+    scroll-snap-align: start;
+  }
+
+  .skill-card {
+    flex: 0 0 38vw;
+    scroll-snap-align: start;
+  }
+
+  /* Setas maiores e mais fáceis de tocar */
+  .carousel-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+
+  /* Seções com padding menor */
+  .carousel-section { padding: 2rem 1rem 1.5rem; }
+  .hero { padding: 3rem 1rem 2rem; }
+}
+
+@media (max-width: 480px) {
+  .contacts { flex-direction: column; gap: 0.4rem; }
+  .contact-sep { display: none; }
+  .card { flex: 0 0 85vw; }
+  .skill-card { flex: 0 0 44vw; }
 }
 
 /* ── SCROLLBAR ───────────────────────────────────── */
